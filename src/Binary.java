@@ -8,7 +8,9 @@ public class Binary {
         System.out.print("Enter a number ");
         int N = sc.nextInt();
 
-        System.out.println("Decimal = "+N+" Binary = "+binary(N));
+        System.out.println("Decimal = "+N+" Binary = "+Integer.toBinaryString(N));
+        System.out.println("Decimal = "+N+" Octal = "+Integer.toOctalString(N));
+        System.out.println("Decimal = "+N+" Hexa = "+Integer.toHexString(N));
 
     }
 
@@ -17,6 +19,7 @@ public class Binary {
         while (n>0){
             rem = n%2;
             bin = bin + rem*a;
+            n/=2;
             a *= 10;
         }
         return bin;
